@@ -15,4 +15,5 @@ class UsersTableSeeder extends Seeder
             $user->profile()->save(factory(App\Profile::class)->make());
         });
     }
+    
 }

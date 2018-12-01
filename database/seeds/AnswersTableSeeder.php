@@ -11,7 +11,8 @@ class AnswersTableSeeder extends Seeder
      */
     public function run()
     {
-            $users = App\User::inRandomOrder();
+        $users = App\User::inRandomOrder();
+        for ($i = 1; $i <= 16; $i++) {
             $users->each(function ($user) {
                 $question = App\Question::inRandomOrder()->first();
                 $answer = factory(\App\Answer::class)->make();
@@ -19,7 +20,8 @@ class AnswersTableSeeder extends Seeder
                 $answer->question()->associate($question);
                 $answer->save();
             });
-     }
+        }
+    }
 }
 
 

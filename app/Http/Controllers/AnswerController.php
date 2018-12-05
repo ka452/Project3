@@ -110,6 +110,7 @@ class AnswerController extends Controller
         return redirect()->route('answers.show',['question_id' => $question, 'answer_id' => $answer])->with('message', 'Updated');
 
     }
+    
 
     /**
      * Remove the specified resource from storage.
